@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--Plantilla para definir el footer del sitio web chicos-->
+    <template id="footer_chicos">
+
+    </template>
+</odoo>

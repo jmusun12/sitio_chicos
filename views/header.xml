@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--Plantilla para definir el header del sitio chicos-->
+    <template id="header_chicos">
+
+    </template>
+</odoo>

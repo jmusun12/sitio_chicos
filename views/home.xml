@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--Plantilla que define la estrutura html de la pagina home de chicos-->
+    <template id="home_template">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <!--Algo va aqui pero no se que es...-->
+            </div>
+        </t>
+    </template>
+
+    <!--Creamos el registro para la pagina home-->
+    <record id="home_page_chicos" model="website.page">
+        <field name="name">Chicos Juguetes Educativos</field>
+        <field name="website_published">True</field>
+        <field name="url">/</field>
+        <field name="type">qweb</field>
+        <field name="key">sitio_chicos.home_page_chicos</field>
+        <field name="is_homepage">True</field>
+        <field name="arch" type="xml">
+            <t t-name="sitio_chicos.home_page">
+                <t t-call="sitio_chicos.home_template"/>
+            </t>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--Reemplazo de header por el de cada sitio-->
+    <template id="heeader_custom_website" inherit_id="website.layout" name="Header Custom">
+        <xpath expr="//div[@id='header']" position="replace">
+            <t t-if="website.code=='IMG'">
+                <t t-call="sitio_imagen.footer_imagen"/>
+            </t>
+            <t t-if="website.code=='CHI'">
+                <t t-call="sitio_chicos.footer_chicos"/>
+            </t>
+            <t t-else="">
+                <t t-call="website.footer_custom"/>
+            </t>
+        </xpath>
+    </template>
+
+    <!--Reemplazo de footer por el de cada sitio-->
+    <template id="footer_custom_website" inherit_id="website.layout" name="Footer Custom">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <t t-if="website.code=='IMG'">
+                <t t-call="sitio_imagen.footer_imagen"/>
+            </t>
+            <t t-if="website.code=='CHI'">
+                <t t-call="sitio_chicos.footer_chicos"/>
+            </t>
+            <t t-else="">
+                <t t-call="website.footer_custom"/>
+            </t>
+        </xpath>
+    </template>
+</odoo>
